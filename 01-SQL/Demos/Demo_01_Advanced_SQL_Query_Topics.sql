@@ -1,3 +1,6 @@
+-- Union combines rows from 2 tables into 1 table
+-- Join combines columns
+
 -- -------------------------------------------------------------------------
 -- DERIVED TABLE EXPRESSION: Scope of Alias is this Outer Query ONLY 
 -- -------------------------------------------------------------------------
@@ -61,6 +64,15 @@ SELECT COUNT(*) FROM (
 	ORDER BY customer_id
 ) AS co;
 
+SELECT c.id AS customer_id
+	, c.first_name
+    , c.last_name
+    , o.*
+FROM northwind.customers AS c
+INNER JOIN northwind.orders AS o
+ON c.id = o.customer_id
+WHERE last_name LIKE 'A%'
+ORDER BY c.last_name ASC;
 
 -- -------------------------------------------------------------------------
 -- SET-BASED OPERATIONS: UNION (Distinct Rows)

@@ -1,4 +1,4 @@
-# ===================================================================================
+ # ===================================================================================
 # How to Integrate a Dimension table. In other words, how to look-up Foreign Key
 # values FROM a dimension table and add them to new Fact table columns.
 #
@@ -6,7 +6,7 @@
 # Close SQL Workbench and Reconnect to the Server Instance.
 # ===================================================================================
 
-USE northwind_dw;
+USE northwind_dw2;
 
 # ==============================================================
 # Step 1: Add New Column(s)
